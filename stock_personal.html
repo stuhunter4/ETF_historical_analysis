@@ -129,89 +129,45 @@
           <div class="col-sm-2">
             <div class="well dpurp white">
               <h2>ETF Tracker</h2>
-              <p>This page is a place for visualizing data on select stock ETFs traded in the U.S., over time and including candlestick information; for learning purposes only.</p>
+              <p>This page is a place for visualizing data on select exchange-traded funds, over time and including candlestick information; for learning purposes only.</p>
               <p>Source:<a href="https://www.kaggle.com/jacksoncrow/stock-market-dataset" target="_blank"> Stock Market Dataset &raquo;</a></p>
-              
+            </div>
+            <div class="well">
+              <p>Use the dropdown menu to select an ETF.</p>
+              <form id="slist">
+                <div class="form-group">
+                  <label for="sel1">Select ETF from list:</label>
+                  <select class="form-control" id="sel">                                      
+                    <option>QQQ</option>
+                    <option>SPLG</option>
+                    <option>IVV</option>
+                    <option>VOO</option>
+                    <option>SPY</option>
+                    <option>DIA</option>
+                    <option>ACWI</option>
+                    <option>VEU</option>
+                    <option>VSS</option>
+                  </select>
+                  <br>
+                </div>
+              </form>
             </div>
           </div>
           <div class="col-sm-10">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-8">
                 <div class="well">
                   <h3></h3>
                   <div id="plot"></div>
                   <p></p> 
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="well">
-                  <h3></h3>
-                  <div id="plot2"></div>
-                  <p></p> 
+                  <h3>Placeholder</h3>
+                  <p>Not sure what to put here, maybe some text, maybe a table, another chart, perhaps all of the above.</p> 
                 </div>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot3"></div>
-                  <p></p> 
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot4"></div>
-                  <p></p> 
-                </div>
-              </div>
-            </div>
-  
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot5"></div>
-                  <p></p> 
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot6"></div>
-                  <p></p> 
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot7"></div>
-                  <p></p> 
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot8"></div>
-                  <p></p> 
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot9"></div>
-                  <p></p> 
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
