@@ -26,6 +26,7 @@ function runEnter() {
         var etf_opening = etf_qqq.map(data => data["Open"]);
         var etf_high = etf_qqq.map(data => data["High"]);
         var etf_low = etf_qqq.map(data => data["Low"]);
+        var etf_vol = etf_qqq.map(data => data["Volume"]);
     }
     else if (inputValue == "SPLG") {
         var etf_name = "SPLG";
@@ -34,6 +35,7 @@ function runEnter() {
         var etf_opening = etf_splg.map(data => data["Open"]);
         var etf_high = etf_splg.map(data => data["High"]);
         var etf_low = etf_splg.map(data => data["Low"]);
+        var etf_vol = etf_splg.map(data => data["Volume"]);
     }
     else if (inputValue == "IVV") {
         var etf_name = "IVV";
@@ -42,6 +44,7 @@ function runEnter() {
         var etf_opening = etf_ivv.map(data => data["Open"]);
         var etf_high = etf_ivv.map(data => data["High"]);
         var etf_low = etf_ivv.map(data => data["Low"]);
+        var etf_vol = etf_ivv.map(data => data["Volume"]);
     }
     else if (inputValue == "VOO") {
         var etf_name = "VOO";
@@ -50,6 +53,7 @@ function runEnter() {
         var etf_opening = etf_voo.map(data => data["Open"]);
         var etf_high = etf_voo.map(data => data["High"]);
         var etf_low = etf_voo.map(data => data["Low"]);
+        var etf_vol = etf_voo.map(data => data["Volume"]);
     }
     else if (inputValue == "SPY") {
         var etf_name = "SPY";
@@ -58,6 +62,7 @@ function runEnter() {
         var etf_opening = etf_spy.map(data => data["Open"]);
         var etf_high = etf_spy.map(data => data["High"]);
         var etf_low = etf_spy.map(data => data["Low"]);
+        var etf_vol = etf_spy.map(data => data["Volume"]);
     }
     else if (inputValue == "DIA") {
         var etf_name = "DIA";
@@ -66,6 +71,7 @@ function runEnter() {
         var etf_opening = etf_dia.map(data => data["Open"]);
         var etf_high = etf_dia.map(data => data["High"]);
         var etf_low = etf_dia.map(data => data["Low"]);
+        var etf_vol = etf_dia.map(data => data["Volume"]);
     }
     else if (inputValue == "ACWI") {
         var etf_name = "ACWI";
@@ -74,6 +80,7 @@ function runEnter() {
         var etf_opening = etf_acwi.map(data => data["Open"]);
         var etf_high = etf_acwi.map(data => data["High"]);
         var etf_low = etf_acwi.map(data => data["Low"]);
+        var etf_vol = etf_acwi.map(data => data["Volume"]);
     }
     else if (inputValue == "VEU") {
         var etf_name = "VEU";
@@ -82,6 +89,7 @@ function runEnter() {
         var etf_opening = etf_veu.map(data => data["Open"]);
         var etf_high = etf_veu.map(data => data["High"]);
         var etf_low = etf_veu.map(data => data["Low"]);
+        var etf_vol = etf_veu.map(data => data["Volume"]);
     }
     else {
         var etf_name = "VSS";
@@ -90,6 +98,7 @@ function runEnter() {
         var etf_opening = etf_vss.map(data => data["Open"]);
         var etf_high = etf_vss.map(data => data["High"]);
         var etf_low = etf_vss.map(data => data["Low"]);
+        var etf_vol = etf_vss.map(data => data["Volume"]);
     }
 
     // create traces
@@ -114,9 +123,23 @@ function runEnter() {
         close: etf_closing
     };
 
+    var trace3 = {
+        type: "bar",
+        x: etf_dates,
+        y: etf_vol,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
 
     // create the data arrays for our plots
     var data = [trace1, trace2];
+    var data2 = [trace3];
 
     // define our plot layouts
     var layout = {
@@ -175,6 +198,7 @@ function runEnter() {
 
     // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout, config);
 
 };
 
@@ -186,6 +210,7 @@ function runStart() {
     var etf_opening = etf_qqq.map(data => data["Open"]);
     var etf_high = etf_qqq.map(data => data["High"]);
     var etf_low = etf_qqq.map(data => data["Low"]);
+    var etf_vol = etf_qqq.map(data => data["Volume"]);
     
     // create traces
     var trace1 = {
@@ -209,9 +234,23 @@ function runStart() {
         close: etf_closing
     };
 
+    var trace3 = {
+        type: "bar",
+        x: etf_dates,
+        y: etf_vol,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
 
     // create the data arrays for our plots
     var data = [trace1, trace2];
+    var data2 = [trace3];
 
     // define our plot layouts
     var layout = {
@@ -270,5 +309,6 @@ function runStart() {
 
     // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout, config);
 
 };
