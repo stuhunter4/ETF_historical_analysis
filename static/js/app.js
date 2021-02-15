@@ -1,5 +1,5 @@
 // from data.js, assign data to a descriptive variable
-var tableData = data;
+// var tableData = data;
 
 // create graphs and table upon opening page
 // function is at the bottom, a reappropriation of runEnter
