@@ -28,10 +28,9 @@ function runEnter() {
         var etf_high = etf_qqq.map(data => data["High"]);
         var etf_low = etf_qqq.map(data => data["Low"]);
         var etf_vol = etf_qqq.map(data => data["Volume"]);
-        var etf_sum1 = "The Nasdaq 100 is an index of 100 of the largest non-financial companies listed on the Nasdaq stock exchange.";
-        var etf_sum2 = "The only ETF meaningfully targeting the Nasdaq 100 is QQQ.";
-        var etf_sum3 = "The top three holdings of QQQ are Apple Inc., Microsoft Corp., and Amazon.com Inc., respectively.";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/articles/etfs/top-etfs-nasdaq/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The Nasdaq 100 is an index of 100 of the largest non-financial companies listed on the Nasdaq stock exchange.";
+        var etf_sum2 = "➤ The only ETF meaningfully targeting the Nasdaq 100 is QQQ.";
+        var etf_sum3 = "➤ The top three holdings of QQQ are Apple Inc., Microsoft Corp., and Amazon.com Inc., respectively.";        
     }
     else if (inputValue == "SPLG") {
         var etf_nm = "SPLG";
@@ -42,10 +41,9 @@ function runEnter() {
         var etf_high = etf_splg.map(data => data["High"]);
         var etf_low = etf_splg.map(data => data["Low"]);
         var etf_vol = etf_splg.map(data => data["Volume"]);
-        var etf_sum1 = "The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
-        var etf_sum2 = "The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
-        var etf_sum3 = "Inception Date: November 15, 2005, Issuer: State Street SPDR";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
+        var etf_sum2 = "➤ The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
+        var etf_sum3 = "➤ Inception Date: November 15, 2005, Issuer: State Street SPDR";        
     }
     else if (inputValue == "IVV") {
         var etf_nm = "IVV";
@@ -56,10 +54,9 @@ function runEnter() {
         var etf_high = etf_ivv.map(data => data["High"]);
         var etf_low = etf_ivv.map(data => data["Low"]);
         var etf_vol = etf_ivv.map(data => data["Volume"]);
-        var etf_sum1 = "The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
-        var etf_sum2 = "The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
-        var etf_sum3 = "Inception Date: May 15, 2000, Issuer: iShares";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
+        var etf_sum2 = "➤ The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
+        var etf_sum3 = "➤ Inception Date: May 15, 2000, Issuer: iShares";        
     }
     else if (inputValue == "VOO") {
         var etf_nm = "VOO";
@@ -70,10 +67,9 @@ function runEnter() {
         var etf_high = etf_voo.map(data => data["High"]);
         var etf_low = etf_voo.map(data => data["Low"]);
         var etf_vol = etf_voo.map(data => data["Volume"]);
-        var etf_sum1 = "The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
-        var etf_sum2 = "The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
-        var etf_sum3 = "Inception Date: September 9, 2010, Issuer: Vanguard";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
+        var etf_sum2 = "➤ The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.";
+        var etf_sum3 = "➤ Inception Date: September 9, 2010, Issuer: Vanguard";        
     }
     else if (inputValue == "SPY") {
         var etf_nm = "SPY";
@@ -84,10 +80,9 @@ function runEnter() {
         var etf_high = etf_spy.map(data => data["High"]);
         var etf_low = etf_spy.map(data => data["Low"]);
         var etf_vol = etf_spy.map(data => data["Volume"]);
-        var etf_sum1 = "The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
-        var etf_sum2 = "The highest-liquidity ETF is SPY.";
-        var etf_sum3 = "Inception Date: January 22, 1993, Issuer: State Street SPDR";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.";
+        var etf_sum2 = "➤ The highest-liquidity ETF is SPY.";
+        var etf_sum3 = "➤ Inception Date: January 22, 1993, Issuer: State Street SPDR";        
     }
     else if (inputValue == "DIA") {
         var etf_nm = "DIA";
@@ -98,10 +93,9 @@ function runEnter() {
         var etf_high = etf_dia.map(data => data["High"]);
         var etf_low = etf_dia.map(data => data["Low"]);
         var etf_vol = etf_dia.map(data => data["Volume"]);
-        var etf_sum1 = "The Dow Jones Industrial Average is a price-weighted index comprised of 30 blue-chip stocks.";
-        var etf_sum2 = "DIA is the best (and only) ETF tracking the Dow.";
-        var etf_sum3 = "DIA's top holdings include UnitedHealth Group Inc., Goldman Sachs Group Inc., and Home Depot Inc.";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/etfs/etfs-track-dow/" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ The Dow Jones Industrial Average is a price-weighted index comprised of 30 blue-chip stocks.";
+        var etf_sum2 = "➤ DIA is the best (and only) ETF tracking the Dow.";
+        var etf_sum3 = "➤ DIA's top holdings include UnitedHealth Group Inc., Goldman Sachs Group Inc., and Home Depot Inc.";        
     }
     else if (inputValue == "ACWI") {
         var etf_nm = "ACWI";
@@ -112,10 +106,9 @@ function runEnter() {
         var etf_high = etf_acwi.map(data => data["High"]);
         var etf_low = etf_acwi.map(data => data["Low"]);
         var etf_vol = etf_acwi.map(data => data["Volume"]);
-        var etf_sum1 = "Three ETFs for investing globally are ACWI, VEU, and VSS.";
-        var etf_sum2 = "The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
-        var etf_sum3 = "Inception Date: March 26, 2008, Issuer: iShares";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ Three ETFs for investing globally are ACWI, VEU, and VSS.";
+        var etf_sum2 = "➤ The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
+        var etf_sum3 = "➤ Inception Date: March 26, 2008, Issuer: iShares";        
     }
     else if (inputValue == "VEU") {
         var etf_nm = "VEU";
@@ -126,10 +119,9 @@ function runEnter() {
         var etf_high = etf_veu.map(data => data["High"]);
         var etf_low = etf_veu.map(data => data["Low"]);
         var etf_vol = etf_veu.map(data => data["Volume"]);
-        var etf_sum1 = "Three ETFs for investing globally are ACWI, VEU, and VSS.";
-        var etf_sum2 = "The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
-        var etf_sum3 = "Inception Date: March 8, 2007, Issuer: Vanguard";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ Three ETFs for investing globally are ACWI, VEU, and VSS.";
+        var etf_sum2 = "➤ The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
+        var etf_sum3 = "➤ Inception Date: March 8, 2007, Issuer: Vanguard";        
     }
     else {
         var etf_nm = "VSS";
@@ -140,10 +132,9 @@ function runEnter() {
         var etf_high = etf_vss.map(data => data["High"]);
         var etf_low = etf_vss.map(data => data["Low"]);
         var etf_vol = etf_vss.map(data => data["Volume"]);
-        var etf_sum1 = "Three ETFs for investing globally are ACWI, VEU, and VSS.";
-        var etf_sum2 = "The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
-        var etf_sum3 = "Inception Date: April 6, 2009, Issuer: Vanguard";
-        var etf_source = 'Source:<a href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank"> Investopedia &raquo;</a>';
+        var etf_sum1 = "➤ Three ETFs for investing globally are ACWI, VEU, and VSS.";
+        var etf_sum2 = "➤ The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.";
+        var etf_sum3 = "➤ Inception Date: April 6, 2009, Issuer: Vanguard";
     }
 
     // create traces
@@ -256,7 +247,6 @@ function runEnter() {
     summary.append("p").text(etf_sum1);
     summary.append("p").text(etf_sum2);
     summary.append("p").text(etf_sum3);
-    summary.append("p").text(etf_source);
 
 };
 
@@ -269,10 +259,9 @@ function runStart() {
     var etf_high = etf_qqq.map(data => data["High"]);
     var etf_low = etf_qqq.map(data => data["Low"]);
     var etf_vol = etf_qqq.map(data => data["Volume"]);
-    var etf_sum1 = "The Nasdaq 100 is an index of 100 of the largest non-financial companies listed on the Nasdaq stock exchange.";
-    var etf_sum2 = "The only ETF meaningfully targeting the Nasdaq 100 is QQQ.";
-    var etf_sum3 = "The top three holdings of QQQ are Apple Inc., Microsoft Corp., and Amazon.com Inc., respectively.";
-    var etf_source = 'Source:<a href="https://www.investopedia.com/articles/etfs/top-etfs-nasdaq/" target="_blank"> Investopedia &raquo;</a>';
+    var etf_sum1 = "➤ The Nasdaq 100 is an index of 100 of the largest non-financial companies listed on the Nasdaq stock exchange.";
+    var etf_sum2 = "➤ The only ETF meaningfully targeting the Nasdaq 100 is QQQ.";
+    var etf_sum3 = "➤ The top three holdings of QQQ are Apple Inc., Microsoft Corp., and Amazon.com Inc., respectively.";
     
     // create traces
     var trace1 = {
@@ -375,15 +364,14 @@ function runStart() {
 
     // select the specific well element by id name
     var summary = d3.select("#summary");
-
+    
     // remove any children from the well
     summary.html("");
-
+    
     // append selected summary elements to the well
     summary.append("h3").text(etf_name);
     summary.append("p").text(etf_sum1);
     summary.append("p").text(etf_sum2);
     summary.append("p").text(etf_sum3);
-    summary.append("p").text(etf_source);
-
+    
 };
