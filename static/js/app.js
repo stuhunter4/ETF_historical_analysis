@@ -252,7 +252,8 @@ function runEnter() {
 
 function runStart() {
     // use the map method with the arrow function to return all the relevant data for the ETF
-    var etf_name = "QQQ";
+    var etf_nm = "QQQ";
+    var etf_name = "Invesco QQQ";
     var etf_dates = etf_qqq.map(data => data["Date"]);
     var etf_closing = etf_qqq.map(data => data["Close"]);
     var etf_opening = etf_qqq.map(data => data["Open"]);
@@ -267,7 +268,7 @@ function runStart() {
     var trace1 = {
         type: "scatter",
         mode: "lines",
-        name: etf_name,
+        name: etf_nm,
         x: etf_dates,
         y: etf_closing,
         line: {
