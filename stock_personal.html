@@ -46,6 +46,10 @@
       background-color: #b8aec8;
     }
 
+    .lpurpc {
+      color: #b8aec8;
+    }
+
     .space {
       padding-left: 20px;
       padding-right: 20px;
@@ -68,6 +72,11 @@
     
     .padded {
       padding-top: 75px;
+    }
+
+    .btn {
+      color: white;
+      background-color: #a0a8d9;
     }
 
     /* Set black background color, white text and some padding */
@@ -129,14 +138,9 @@
           <div class="col-sm-2">
             <div class="well dpurp white">
               <h2>ETF Analysis</h2>
-              <p>This page is a place for visualizing data on select index-based exchange-traded funds over time; for learning purposes only.</p>
-            </div>
-            <div class="well dpurp white">
-              <p>Sources:<a href="https://www.kaggle.com/jacksoncrow/stock-market-dataset" target="_blank"> Stock Market Dataset &raquo;</a></p>
-              <p><a href="https://www.investopedia.com/articles/etfs/top-etfs-nasdaq/" target="_blank"> Best Nasdaq ETFs &raquo;</a></p>
-              <p><a href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank"> Best S&P 500 ETFs &raquo;</a></p>
-              <p><a href="https://www.investopedia.com/etfs/etfs-track-dow/" target="_blank"> Best DJIA ETFs &raquo;</a></p>
-              <p><a href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank"> Best MSCI World Index ETFs &raquo;</a></p>
+              <p>This project is a place for visualizing data on select index-based exchange-traded funds over time.</p>
+              <p>It is meant for learning purposes only, and is not indended to be investment advice.</p>
+              <p>Sourced from Yahoo Finance: <a class="lpurpc" href="https://finance.yahoo.com/" target="_blank">link &raquo;</a></p>
             </div>
             <div class="well">
               <p>Use the dropdown menu to select an ETF.</p>
@@ -158,37 +162,72 @@
                 </div>
               </form>
             </div>
+            <div class="well">
+              <h5>I'm a Table</h5>
+            </div>
+            <div class="card text-center">
+              <button id="one_mo" type="button" class="btn btn-default btn-lg">1M</button>
+              <button id="three_mo" type="button" class="btn btn-default btn-lg">3M</button>
+              <button id="six_mo" type="button" class="btn btn-default btn-lg">6M</button>
+              <button id="one_yr" type="button" class="btn btn-default btn-lg">1Y</button>
+              <button id="five_yr" type="button" class="btn btn-default btn-lg">5Y</button>
+              <button id="ten_yr" type="button" class="btn btn-default btn-lg">10Y</button>
+              <button id="max" type="button" class="btn btn-default btn-lg">MAX</button>
+            </div>
           </div>
-          <div class="col-sm-10">
-            <div class="row">
-              <div class="col-sm-8">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot"></div>
-                  <p></p> 
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="well" id="summary">
-                </div>
-              </div>
+          <div class="col-sm-6">
+            <div class="well">
+              <h3></h3>
+              <div id="plot"></div>
+              <p></p> 
             </div>
-            <div class="row">
-              <div class="col-sm-8">
-                <div class="well">
-                  <h3></h3>
-                  <div id="plot2"></div>
-                  <p></p> 
-                </div>
-              </div>
-              
+            <div class="well">
+              <h3></h3>
+              <div id="plot2"></div>
+              <p></p> 
+            </div>            
+          </div>
+          <div class="col-sm-4">
+            <div class="well">
+              <h3>Nasdaq 100 ETF</h3>
+              <p>➤ The Nasdaq 100 is an index of 100 of the largest non-financial companies listed on the Nasdaq stock exchange.</p>
+              <p>➤ The only ETF meaningfully targeting the Nasdaq 100 is Invesco QQQ (QQQ).</p>
+              <p>➤ The top three holdings of QQQ are Apple Inc., Microsoft Corp., and Amazon.com Inc., respectively.</p>
+              <p><a class="lpurpc" href="https://www.investopedia.com/articles/etfs/top-etfs-nasdaq/" target="_blank">Investopedia: Best Nasdaq ETFs &raquo;</a></p>
             </div>
+            <div class="well">
+              <h3>S&P 500 ETFs</h3>
+              <p>➤ The S&P 500 is a market-cap-weighted index of 505 large-cap U.S. stocks.</p>
+              <p>➤ The S&P 500 ETFs with the lowest fees are SPLG, IVV, and VOO.</p>
+              <p>➤ The highest-liquidity ETF is SPY.</p>
+              <p>➤ SPDR Portfolio S&P 500 (SPLG) Inception Date: November 15, 2005, Issuer: State Street SPDR</p>
+              <p>➤ iShares Core S&P 500 (IVV) Inception Date: May 15, 2000, Issuer: iShares</p>
+              <p>➤ Vanguard S&P 500 (VOO) Inception Date: September 9, 2010, Issuer: Vanguard</p>
+              <p>➤ SPDR S&P 500 (SPY) Inception Date: January 22, 1993, Issuer: State Street SPDR</p>
+              <p><a class="lpurpc" href="https://www.investopedia.com/investing/top-sp-500-etfs/" target="_blank">Investopedia: Best S&P 500 ETFs &raquo;</a></p>
+            </div>
+            <div class="well">
+              <h3>Dow Jones Industrial Average ETF</h3>
+              <p>➤ The Dow Jones Industrial Average is a price-weighted index comprised of 30 blue-chip stocks.</p>
+              <p>➤ SPDR Dow Jones Industrial Average (DIA) is the best (and only) ETF tracking the Dow.</p>
+              <p>➤ DIA's top holdings include UnitedHealth Group Inc., Goldman Sachs Group Inc., and Home Depot Inc.</p>
+              <p><a class="lpurpc" href="https://www.investopedia.com/etfs/etfs-track-dow/" target="_blank">Investopedia: Best DJIA ETFs &raquo;</a></p>
+            </div>
+            <div class="well">
+              <h3>Gloabl ETFs</h3>
+              <p>➤ Three ETFs for investing globally are ACWI, VEU, and VSS.</p>
+              <p>➤ The top holdings of these ETFs are Apple Inc., Alibaba Group Holding Ltd., and Kirkland Lake Gold Ltd., respectively.</p>
+              <p>➤ iShares MSCI ACWI (ACWI) Inception Date: March 26, 2008, Issuer: iShares</p>
+              <p>➤ Vanguard FTSE All World ex US (VEU) Inception Date: March 8, 2007, Issuer: Vanguard</p>
+              <p>➤ Vanguard FTSE All-World ex-US Small-Cap (VSS) Inception Date: April 6, 2009, Issuer: Vanguard</p>
+              <p><a class="lpurpc" href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank">Investopedia: Best MSCI World Index ETFs &raquo;</a></p>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
-  </div>  
-       
+  </div>   
 <footer class="container-fluid">
   <div class="row">
       <div class="col-sm-12 ml-md-auto">
