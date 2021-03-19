@@ -73,12 +73,16 @@
     .padded {
       padding-top: 75px;
     }
-
+    
     .btn {
       color: white;
       background-color: #a0a8d9;
     }
 
+    #hide_me {
+      display: none;
+    }
+    
     /* Set black background color, white text and some padding */
     footer {
       background-color: #555;
@@ -143,7 +147,6 @@
               <p>Sourced from Yahoo Finance: <a class="lpurpc" href="https://finance.yahoo.com/" target="_blank">link &raquo;</a></p>
             </div>
             <div class="well">
-              <p>Use the dropdown menu to select an ETF.</p>
               <form id="slist">
                 <div class="form-group">
                   <label for="sel1">Select ETF from list:</label>
@@ -163,7 +166,18 @@
               </form>
             </div>
             <div class="well">
-              <h5>I'm a Table</h5>
+              <div id="table-area" class="table-responsive">
+                <table id="ufo-table" class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="table-head"> </th>
+                      <th id="demo1" class="table-head"> </th>
+                      <th id="hide_me" class="table-head"> </th>
+                    </tr>
+                  </thead>
+                  <tbody id="edit"></tbody>
+                </table>
+              </div>
             </div>
             <div class="card text-center">
               <button id="one_mo" type="button" class="btn btn-default btn-lg">1M</button>
@@ -194,19 +208,41 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="well">
-                  <img src="images/returns/returns_VEU_1Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                  <img src="images/close/returns_VEU_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="well">
-                  <img src="images/returns/returns_VEU_10Y.jpg" class="img-responsive" style="width:100%" alt="Image">
+                  <img src="images/returns/returns_VEU_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-8">
+              <div class="col-sm-6">
                 <div class="well">
-                  <p>boo</p>
+                  <img src="images/vol_hist/histogram_qqq_symbols_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="well">
+                  <img src="images/vol_hist/ked_hist_qqq_symbols_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="col-sm-6">
+                  <div class="well">
+                    <img src="images/monte_carlo/simulated_VEU_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                  </div>
+                  <div class="well">
+                    <img src="images/monte_carlo/quantile_VEU_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="well">
+                    <img src="images/correlation/scatter_VEU_10Y.jpg" class="img-responsive rcorners border" style="width:100%" alt="Image">
+                  </div>
                 </div>
               </div>
             </div>
@@ -246,9 +282,11 @@
               <p>➤ Vanguard FTSE All-World ex-US Small-Cap (VSS) Inception Date: April 6, 2009, Issuer: Vanguard</p>
               <p><a class="lpurpc" href="https://www.investopedia.com/articles/etfs-mutual-funds/071516/top-3-etfs-tracking-msci-world-index-urth-vt.asp" target="_blank">Investopedia: Best MSCI World Index ETFs &raquo;</a></p>
             </div>
-            
           </div>
+
         </div>
+        <div class="row"
+
       </div>
     </div>
   </div>   
