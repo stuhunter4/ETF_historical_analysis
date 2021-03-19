@@ -4,13 +4,10 @@ var dates_list = ['2021-03-18', '2021-02-16', '2020-12-17', '2020-09-17', '2020-
 
 // create first chart upon opening page
 runStart();
-
 // from data.js, assign data to a descriptive variable
 var tableData = data;
-
 // select the dropdown selection
 var slist = d3.select("#slist");
-
 // select the buttons for filtering period
 var one_mo = d3.select("#one_mo");
 var three_mo = d3.select("#three_mo");
@@ -19,10 +16,8 @@ var one_yr = d3.select("#one_yr");
 var five_yr = d3.select("#five_yr");
 var ten_yr = d3.select("#ten_yr");
 var max = d3.select("#max");
-
 // create event handlers for selecting a list option
 slist.on("change", runMax);
-
 // buttons
 one_mo.on("click", run1Month);
 three_mo.on("click", run3Month);
@@ -31,16 +26,19 @@ one_yr.on("click", run1Year);
 five_yr.on("click", run5Year);
 ten_yr.on("click", run10Year);
 max.on("click", runMax);
-
 function runStart() {
     var startValue = 'QQQ';
     var todayValue = dates_list[0];
     // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === startValue);
     // use the map method with the arrow function to return all the filtered week numbers.
-    var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
+    var adj_close = filteredData.map(etf => etf['Adj Close']);
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
     var dates = filteredData.map(etf => etf.Date);
+    var volume = filteredData.map(etf => etf.Volume);
     // create traces
     var trace1 = {
         type: "scatter",
@@ -59,13 +57,49 @@ function runStart() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${startValue}: ${todayValue}`,
-      };
+    };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${startValue}: ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
+    // plot the chart to div tag
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run1Month() {
@@ -84,6 +118,10 @@ function run1Month() {
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     // create traces
     var trace1 = {
         type: "scatter",
@@ -102,32 +140,65 @@ function run1Month() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 1M, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 1M, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
+    // plot the chart to a div tag
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run3Month() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
     var dateValue = dates_list[2];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue && etf.Date >= dateValue && etf.Date <= todayValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -145,32 +216,64 @@ function run3Month() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 3M, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 3M, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run6Month() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
     var dateValue = dates_list[3];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue && etf.Date >= dateValue && etf.Date <= todayValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -188,32 +291,64 @@ function run6Month() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 6M, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 6M, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run1Year() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
     var dateValue = dates_list[4];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue && etf.Date >= dateValue && etf.Date <= todayValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -231,32 +366,64 @@ function run1Year() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 1Y, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 1Y, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run5Year() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
     var dateValue = dates_list[5];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue && etf.Date >= dateValue && etf.Date <= todayValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -274,32 +441,64 @@ function run5Year() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 5Y, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 5Y, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function run10Year() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
     var dateValue = dates_list[6];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue && etf.Date >= dateValue && etf.Date <= todayValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -317,31 +516,63 @@ function run10Year() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: 10Y, ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: 10Y, ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
 
 function runMax() {
-    // prevent the page from refreshing
     d3.event.preventDefault();
-    // select the input element and get the raw HTML node
     var listElement = d3.select("#sel");
-    // get the value property of the input element
     var etfValue = listElement.property("value");
-    // create variable for period date
     var todayValue = dates_list[0];
-    // filter() uses input and date as its argument
     var filteredData = tableData.filter(etf => etf.symbol === etfValue);
-    // use the map method with the arrow function to return all the filtered week numbers.
     var adj_close = filteredData.map(etf => etf['Adj Close']);
     var close = filteredData.map(etf => etf.Close);
     var dates = filteredData.map(etf => etf.Date);
-    // create traces
+    var open = filteredData.map(etf => etf.Open);
+    var high = filteredData.map(etf => etf.High);
+    var low = filteredData.map(etf => etf.Low);
+    var volume = filteredData.map(etf => etf.Volume);
     var trace1 = {
         type: "scatter",
         mode: "lines",
@@ -359,11 +590,46 @@ function runMax() {
         y: adj_close,
         line: {color: '#a0a8d9', alpha: 0.5}
     };
+    var trace3 = {
+        type: "candlestick",
+        x: dates,
+        high: high,
+        low: low,
+        open: open,
+        close: close,
+        increasing: {line: {color: 'green'}},
+        decreasing: {line: {color: 'red'}},
+    };
+    var trace4 = {
+        type: "bar",
+        x: dates,
+        y: volume,
+        marker: {
+            color: "rgb(158,202,225)",
+            opacity: 0.6,
+            line: {
+                color: "rgb(8,48,107)",
+                width: 0.5
+            }
+        }
+    };
     var data = [trace1, trace2];
+    var data2 = [trace3];
+    var data3 = [trace4];
     var layout = {
         title: `${etfValue}: ${todayValue}`,
       };
+    var layout2 = {
+        dragmode: 'zoom',
+        title: `${etfValue}: ${todayValue}`,
+        xaxis: {
+          rangeslider: {
+               visible: false
+           }
+        }
+    };
     var config = {responsive: true}
-    // plot the chart to a div tag with id "plot"
     Plotly.newPlot("plot", data, layout, config);
+    Plotly.newPlot("plot2", data2, layout2, config);
+    Plotly.newPlot("plot3", data3, layout, config);
 }
