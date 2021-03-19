@@ -970,22 +970,22 @@ function runMax() {
         var url6 = 'images/correlation/scatter_VEU_10Y.jpg';
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
-        var url = 'images/close/close_VSS_10y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_10y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_10y.jpg';
-        var url3 = 'images/returns/returns_VSS_10y.jpg';
-        var url4 = 'images/vol_hist/histogram_glob_symbols_10y.jpg';
-        var url5 = 'images/vol_hist/ked_hist_glob_symbols_10y.jpg';
-        var url6 = 'images/correlation/scatter_VSS_10y.jpg';
+        var url = 'images/close/close_VSS_10Y.jpg';
+        var url1 = 'images/monte_carlo/simulated_VSS_10Y.jpg';
+        var url2 = 'images/monte_carlo/quantile_VSS_10Y.jpg';
+        var url3 = 'images/returns/returns_VSS_10Y.jpg';
+        var url4 = 'images/vol_hist/histogram_glob_symbols_10Y.jpg';
+        var url5 = 'images/vol_hist/ked_hist_glob_symbols_10Y.jpg';
+        var url6 = 'images/correlation/scatter_VSS_10Y.jpg';
     }
     else {
-        var url = 'images/close/close_DIA_10y.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_10y.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_10y.jpg';
-        var url3 = 'images/returns/returns_DIA_10y.jpg';
-        var url4 = 'images/vol_hist/histogram_sp_symbols_10y.jpg';
-        var url5 = 'images/vol_hist/ked_hist_sp_symbols_10y.jpg';
-        var url6 = 'images/correlation/scatter_DIA_10y.jpg';
+        var url = 'images/close/close_DIA_10Y.jpg';
+        var url1 = 'images/monte_carlo/simulated_DIA_10Y.jpg';
+        var url2 = 'images/monte_carlo/quantile_DIA_10Y.jpg';
+        var url3 = 'images/returns/returns_DIA_10Y.jpg';
+        var url4 = 'images/vol_hist/histogram_sp_symbols_10Y.jpg';
+        var url5 = 'images/vol_hist/ked_hist_sp_symbols_10Y.jpg';
+        var url6 = 'images/correlation/scatter_DIA_10Y.jpg';
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
