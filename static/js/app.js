@@ -979,7 +979,7 @@ function runMax() {
         var url6 = 'images/correlation/scatter_VSS_10Y.jpg';
     }
     else {
-        var url = 'images/close/close_DIA_10Y.jpg';
+        var url = 'https://github.com/stuhunter4/ETF_historical_analysis/blob/main/images/close/close_DIA_10Y.jpg';
         var url1 = 'images/monte_carlo/simulated_DIA_10Y.jpg';
         var url2 = 'images/monte_carlo/quantile_DIA_10Y.jpg';
         var url3 = 'images/returns/returns_DIA_10Y.jpg';
