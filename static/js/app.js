@@ -100,6 +100,34 @@ function runStart() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_10Y.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
+    var url3 = 'images/returns/returns_VEU_10Y.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
+    var url6 = 'images/correlation/scatter_VEU_10Y.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run1Month() {
@@ -183,6 +211,35 @@ function run1Month() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    // someone online suggests: use jquery's .html() method
+    var url = 'images/close/close_VEU_1M.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_1M.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_1M.jpg';
+    var url3 = 'images/returns/returns_VEU_1M.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_1M.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_1M.jpg';
+    var url6 = 'images/correlation/scatter_VEU_1M.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run3Month() {
@@ -258,6 +315,34 @@ function run3Month() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_3M.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_3M.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_3M.jpg';
+    var url3 = 'images/returns/returns_VEU_3M.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_3M.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_3M.jpg';
+    var url6 = 'images/correlation/scatter_VEU_3M.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run6Month() {
@@ -333,6 +418,34 @@ function run6Month() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_6M.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_6M.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_6M.jpg';
+    var url3 = 'images/returns/returns_VEU_6M.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_6M.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_6M.jpg';
+    var url6 = 'images/correlation/scatter_VEU_6M.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run1Year() {
@@ -408,6 +521,34 @@ function run1Year() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_1Y.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_1Y.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_1Y.jpg';
+    var url3 = 'images/returns/returns_VEU_1Y.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_1Y.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_1Y.jpg';
+    var url6 = 'images/correlation/scatter_VEU_1Y.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run5Year() {
@@ -483,6 +624,34 @@ function run5Year() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_5Y.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_5Y.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_5Y.jpg';
+    var url3 = 'images/returns/returns_VEU_5Y.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_5Y.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_5Y.jpg';
+    var url6 = 'images/correlation/scatter_VEU_5Y.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function run10Year() {
@@ -558,6 +727,34 @@ function run10Year() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_10Y.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
+    var url3 = 'images/returns/returns_VEU_10Y.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
+    var url6 = 'images/correlation/scatter_VEU_10Y.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
 
 function runMax() {
@@ -632,4 +829,32 @@ function runMax() {
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
+    var url = 'images/close/close_VEU_10Y.jpg';
+    var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
+    var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
+    var url3 = 'images/returns/returns_VEU_10Y.jpg';
+    var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
+    var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
+    var url6 = 'images/correlation/scatter_VEU_10Y.jpg';
+    $(document).ready(function() {
+    $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#hist_id').html(`<img src='${url4}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#ked_id').html(`<img src='${url5}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
+    $(document).ready(function() {
+    $('#scatter_id').html(`<img src='${url6}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
+    });
 }
