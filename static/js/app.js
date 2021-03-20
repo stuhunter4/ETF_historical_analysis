@@ -50,7 +50,7 @@ function runStart() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -88,6 +88,7 @@ function runStart() {
     var data2 = [trace3];
     var data3 = [trace4];
     var layout = {
+        
         title: `${startValue}: ${todayValue}`,
     };
     var layout2 = {
@@ -165,7 +166,7 @@ function run1Month() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tonexty',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -293,7 +294,7 @@ function run3Month() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -416,7 +417,7 @@ function run6Month() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -539,7 +540,7 @@ function run1Year() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -662,7 +663,7 @@ function run5Year() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -785,7 +786,7 @@ function run10Year() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
@@ -907,7 +908,7 @@ function runMax() {
         name: 'Close',
         x: dates,
         y: close,
-        fill: 'tozeroy',
+        //fill: 'tozeroy',
         line: {color: '#17BECF'}
     };
     var trace2 = {
