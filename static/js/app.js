@@ -106,20 +106,12 @@ function runStart() {
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
     var url = 'images/close/close_VEU_10Y.jpg';
-    var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
-    var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
     var url3 = 'images/returns/returns_VEU_10Y.jpg';
     var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
     var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
     var url6 = 'images/correlation/scatter_VEU_10Y.jpg';
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -224,8 +216,6 @@ function run1Month() {
     // conditional statement for image selection
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_1M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_1M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_1M.jpg';
         var url3 = 'images/returns/returns_VEU_1M.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_1M.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_1M.jpg';
@@ -233,8 +223,6 @@ function run1Month() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_1M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_1M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_1M.jpg';
         var url3 = 'images/returns/returns_VSS_1M.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_1M.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_1M.jpg';
@@ -242,8 +230,6 @@ function run1Month() {
     }
     else {
         var url = 'images/close/close_DIA_1M.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_1M.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_1M.jpg';
         var url3 = 'images/returns/returns_DIA_1M.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_1M.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_1M.jpg';
@@ -253,12 +239,6 @@ function run1Month() {
     // someone online suggests: use jquery's .html() method to append images to html
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -349,8 +329,6 @@ function run3Month() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_3M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_3M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_3M.jpg';
         var url3 = 'images/returns/returns_VEU_3M.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_3M.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_3M.jpg';
@@ -358,8 +336,6 @@ function run3Month() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_3M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_3M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_3M.jpg';
         var url3 = 'images/returns/returns_VSS_3M.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_3M.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_3M.jpg';
@@ -367,8 +343,6 @@ function run3Month() {
     }
     else {
         var url = 'images/close/close_DIA_3M.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_3M.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_3M.jpg';
         var url3 = 'images/returns/returns_DIA_3M.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_3M.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_3M.jpg';
@@ -376,12 +350,6 @@ function run3Month() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -472,8 +440,6 @@ function run6Month() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_6M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_6M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_6M.jpg';
         var url3 = 'images/returns/returns_VEU_6M.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_6M.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_6M.jpg';
@@ -481,8 +447,6 @@ function run6Month() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_6M.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_6M.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_6M.jpg';
         var url3 = 'images/returns/returns_VSS_6M.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_6M.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_6M.jpg';
@@ -490,8 +454,6 @@ function run6Month() {
     }
     else {
         var url = 'images/close/close_DIA_6M.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_6M.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_6M.jpg';
         var url3 = 'images/returns/returns_DIA_6M.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_6M.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_6M.jpg';
@@ -499,12 +461,6 @@ function run6Month() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -595,8 +551,6 @@ function run1Year() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_1Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_1Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_1Y.jpg';
         var url3 = 'images/returns/returns_VEU_1Y.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_1Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_1Y.jpg';
@@ -604,8 +558,6 @@ function run1Year() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_1Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_1Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_1Y.jpg';
         var url3 = 'images/returns/returns_VSS_1Y.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_1Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_1Y.jpg';
@@ -613,8 +565,6 @@ function run1Year() {
     }
     else {
         var url = 'images/close/close_DIA_1Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_1Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_1Y.jpg';
         var url3 = 'images/returns/returns_DIA_1Y.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_1Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_1Y.jpg';
@@ -622,12 +572,6 @@ function run1Year() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -718,8 +662,6 @@ function run5Year() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_5Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_5Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_5Y.jpg';
         var url3 = 'images/returns/returns_VEU_5Y.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_5Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_5Y.jpg';
@@ -727,8 +669,6 @@ function run5Year() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_5Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_5Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_5Y.jpg';
         var url3 = 'images/returns/returns_VSS_5Y.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_5Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_5Y.jpg';
@@ -736,8 +676,6 @@ function run5Year() {
     }
     else {
         var url = 'images/close/close_DIA_5Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_5Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_5Y.jpg';
         var url3 = 'images/returns/returns_DIA_5Y.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_5Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_5Y.jpg';
@@ -745,12 +683,6 @@ function run5Year() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -841,8 +773,6 @@ function run10Year() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
         var url3 = 'images/returns/returns_VEU_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
@@ -850,8 +780,6 @@ function run10Year() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_10Y.jpg';
         var url3 = 'images/returns/returns_VSS_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_10Y.jpg';
@@ -859,8 +787,6 @@ function run10Year() {
     }
     else {
         var url = 'images/close/close_DIA_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_10Y.jpg';
         var url3 = 'images/returns/returns_DIA_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_10Y.jpg';
@@ -868,12 +794,6 @@ function run10Year() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
@@ -963,8 +883,6 @@ function runMax() {
     Plotly.newPlot("plot3", data3, layout, config);
     if (etfValue == 'QQQ' || etfValue == 'DIA') {
         var url = 'images/close/close_VEU_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VEU_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VEU_10Y.jpg';
         var url3 = 'images/returns/returns_VEU_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_qqq_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_qqq_symbols_10Y.jpg';
@@ -972,8 +890,6 @@ function runMax() {
     }
     else if (etfValue == 'ACWI' || etfValue == 'VEU' || etfValue == 'VSS') {
         var url = 'images/close/close_VSS_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_VSS_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_VSS_10Y.jpg';
         var url3 = 'images/returns/returns_VSS_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_glob_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_glob_symbols_10Y.jpg';
@@ -981,8 +897,6 @@ function runMax() {
     }
     else {
         var url = 'images/close/close_DIA_10Y.jpg';
-        var url1 = 'images/monte_carlo/simulated_DIA_10Y.jpg';
-        var url2 = 'images/monte_carlo/quantile_DIA_10Y.jpg';
         var url3 = 'images/returns/returns_DIA_10Y.jpg';
         var url4 = 'images/vol_hist/histogram_sp_symbols_10Y.jpg';
         var url5 = 'images/vol_hist/ked_hist_sp_symbols_10Y.jpg';
@@ -990,12 +904,6 @@ function runMax() {
     }
     $(document).ready(function() {
     $('#close_id').html(`<img src='${url}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#sim_id').html(`<img src='${url1}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
-    });
-    $(document).ready(function() {
-    $('#quant_id').html(`<img src='${url2}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
     });
     $(document).ready(function() {
     $('#returns_id').html(`<img src='${url3}' class="img-responsive rcorners border" style="width:100%" alt="Image">`);
