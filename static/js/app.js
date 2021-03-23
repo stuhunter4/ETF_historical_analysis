@@ -1,6 +1,6 @@
 // from data.js, assign data to a descriptive variable
 var tableData = data;
-var dates_list = ['2021-03-19', '2021-02-17', '2020-12-18', '2020-09-18', '2020-03-19', '2016-03-20', '2011-03-22'];
+var dates_list = ['2021-03-23', '2021-02-21', '2020-12-22', '2020-09-22', '2020-03-23', '2016-03-24', '2011-03-26'];
 
 // create first chart upon opening page
 runStart();
@@ -100,7 +100,7 @@ function runStart() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     // plot the chart to div tag
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
@@ -207,7 +207,7 @@ function run1Month() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     // plot the chart to a div tag
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
@@ -323,7 +323,7 @@ function run3Month() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
@@ -434,7 +434,7 @@ function run6Month() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
@@ -545,7 +545,7 @@ function run1Year() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
@@ -656,7 +656,7 @@ function run5Year() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
@@ -767,7 +767,7 @@ function run10Year() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
@@ -877,7 +877,7 @@ function runMax() {
            }
         }
     };
-    var config = {responsive: true}
+    var config = {responsive: true, displayModeBar: false}
     Plotly.newPlot("plot", data, layout, config);
     Plotly.newPlot("plot2", data2, layout2, config);
     Plotly.newPlot("plot3", data3, layout, config);
