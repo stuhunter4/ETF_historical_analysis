@@ -4,4 +4,4 @@ As a means to extract and explore financial datasets and analysis practices, thi
 
 https://stuhunter4.github.io/ETF_historical_analysis/stock_personal.html
 
-![etfDemo](images/etfDemo.GIF)
+![etfDemo](images/etfDemo.gif)
