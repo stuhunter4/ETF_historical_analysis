@@ -1,6 +1,6 @@
 // from data.js, assign data to a descriptive variable
 var tableData = data;
-var dates_list = ['2021-04-16', '2021-03-17', '2021-01-15', '2020-10-16', '2020-04-16', '2016-04-17', '2011-04-19'];
+var dates_list = ['2021-04-23', '2021-03-24', '2021-01-22', '2020-10-23', '2020-04-23', '2016-04-24', '2011-04-26'];
 
 // create first chart upon opening page
 runStart();
